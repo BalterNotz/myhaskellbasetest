@@ -18,6 +18,7 @@ fib_1000000 = do
     print(fibsN (1000000 - 1))
 
 fibN = do
+-- 因为惰性求值的问题会导致下面这一句的输出有问题。
     putStr("Please a num to calculate: ")
     n <- getLine
     putStrLn $ show (fibsN ((read n) - 1))
